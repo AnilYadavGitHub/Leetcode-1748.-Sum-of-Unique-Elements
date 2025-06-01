@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int sumOfUnique(vector<int>& nums) {
+        
+        unordered_map<int , int>mp;
+        
+        for(auto i : nums){
+            mp[i]++;
+        }
+        
+        int sum = 0;
+        
+        
+        for(auto[a , b] : mp){
+            
+            if(b == 1){
+                sum += a;
+            }
+        }
+        
+        return sum;
+    }
+};
